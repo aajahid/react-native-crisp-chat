@@ -1,5 +1,5 @@
-import { NativeModules } from 'react-native';
+import { NativeModules, requireNativeComponent } from 'react-native';
 
 const { CrispChat } = NativeModules;
-
-export default CrispChat;
+export const CrispChatWindow = requireNativeComponent('RCTCrispChatWindow');
+export const CrispChat = CrispChat;
