@@ -32,13 +32,8 @@ public class CrispChatModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void initialize(String websiteId) {
+        console.log('Initialize called');
         Crisp.initialize(this.reactContext);
         Crisp.getInstance().setWebsiteId(websiteId);
-    }
-
-    @ReactMethod
-    public void sampleMethod(String stringArgument, int numberArgument, Callback callback) {
-        // TODO: Implement some actually useful functionality
-        callback.invoke("Received numberArgument: " + numberArgument + " stringArgument: " + stringArgument);
     }
 }
