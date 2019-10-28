@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="im.crisp.sdk.ui.CrispFragment"
+    android:tag="crisp_fragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <fragment
-        android:name="im.crisp.sdk.ui.CrispFragment"
-        android:tag="crisp_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="0dp" />
-
-</LinearLayout>
+    android:layout_height="match_parent"
+    android:layout_margin="0dp">
+</fragment>
