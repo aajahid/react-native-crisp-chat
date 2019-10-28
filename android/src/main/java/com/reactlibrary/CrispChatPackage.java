@@ -11,9 +11,16 @@ import com.facebook.react.uimanager.ViewManager;
 import com.facebook.react.bridge.JavaScriptModule;
 
 public class CrispChatPackage implements ReactPackage {
+
+    private String WebsiteId;
+
+    public CrispChatPackage(String websiteId) {
+        WebsiteId = websiteId;
+    }
+
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-        return Arrays.<NativeModule>asList(new CrispChatModule(reactContext));
+        return Arrays.<NativeModule>asList(new CrispChatModule(WebsiteId, reactContext));
     }
 
     @Override
