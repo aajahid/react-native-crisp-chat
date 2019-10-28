@@ -7,6 +7,6 @@ public class CrispChatLinearLayout extends LinearLayout {
 
     public CrispChatLinearLayout(Context context) {
         super(context);
-        inflate(context, R.layout.crispwindow, this);
+        inflate(context, R.layout.crisp_view, this);
     }
 }

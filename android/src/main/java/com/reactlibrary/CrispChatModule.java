@@ -20,19 +20,15 @@ public class CrispChatModule extends ReactContextBaseJavaModule {
 
     private final ReactApplicationContext reactContext;
 
-    public CrispChatModule(ReactApplicationContext reactContext) {
+    public CrispChatModule(String websiteId,  ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
+        Crisp.initialize(reactContext);
+        Crisp.getInstance().setWebsiteId(websiteId);
     }
 
     @Override
     public String getName() {
         return "CrispChat";
-    }
-
-    @ReactMethod
-    public void initialize(String websiteId) {
-        Crisp.initialize(this.reactContext);
-        Crisp.getInstance().setWebsiteId(websiteId);
     }
 }
